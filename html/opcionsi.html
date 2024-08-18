@@ -22,13 +22,11 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      width: 100vw; /* Asegura que el body tenga el ancho completo del viewport */
+      width: 100vw;
       background-color: #b57edc; /* Fondo amatista */
       font-family: 'Dancing Script', cursive; /* Aplicar la fuente Dancing Script */
-      overflow-x: auto; /* Permitir el desplazamiento horizontal */
-      overflow-y: hidden; /* Evitar el desplazamiento vertical */
+      overflow: auto; /* Permitir el desplazamiento en ambas direcciones */
       color: #fff; /* Color de texto blanco */
-      scroll-snap-type: x mandatory; /* Hacer que el scroll se ajuste a los elementos */
     }
 
     /* Contenedor principal */
@@ -36,9 +34,12 @@
       text-align: center;
       position: relative;
       z-index: 1; /* Asegura que el contenido esté sobre los elementos flotantes */
-      width: 100%; /* Ancho completo del contenedor */
-      max-width: 1200px; /* Ancho máximo para evitar un desplazamiento excesivo */
-      scroll-snap-align: center; /* Alineación de los elementos durante el desplazamiento */
+      width: 90vw; /* Ancho máximo del contenedor */
+      max-width: 1200px; /* Ancho máximo del contenedor */
+      height: 80vh; /* Altura máxima del contenedor */
+      max-height: 800px; /* Altura máxima del contenedor */
+      overflow: hidden; /* Evitar el desbordamiento dentro del contenedor */
+      scroll-snap-type: both mandatory; /* Hacer que el scroll se ajuste a los elementos */
     }
 
     /* Estilo de encabezados */
@@ -207,3 +208,4 @@
   </script>
 </body>
 </html>
+
